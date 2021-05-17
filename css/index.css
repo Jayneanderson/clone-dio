@@ -25,28 +25,29 @@ header a.logo {
 }
 
 header ul {
-    list-style-type: none;
+    height: 100%;
     display: flex;
-    
+    align-items: center;
+    list-style-type: none;
 }
 
 header ul li:first-child {
     margin-left: 45px;
+}
 
+header ul.first-list li {
+    margin-right: 3px;
+    margin-top: 3px;
 }
 
 header ul.first-list a {
-
+    font-size: 14.5px;
 }
 
 header ul.first-list li.pro {
     position: relative;
     margin-right: 7px;
-}
-
-header ul.first-list li#seja-pro {
-    padding: 4px 8px;
-    background-color: #fa962a;
+    margin-left: 35px;
 }
 
 header ul.first-list li.pro a:after {
@@ -58,11 +59,23 @@ header ul.first-list li.pro a:after {
     padding: 2px 3px;
     border-radius: 4px;
     background-color: #fa962a;
+    color: #fff;
 }
 
 header ul.first-list li:hover a {
     cursor: pointer;
     color: #fa962a;
+}
+
+header ul.first-list li#seja-pro a {
+    padding: 5px 8px;
+    background-color: #fa962a;
+    color: #fff;
+    border-radius: 3px;
+}
+
+header ul.first-list li#seja-pro:hover a {
+    background-color: #f88406;
 }
 
 header ul li {
@@ -110,4 +123,18 @@ header ul.last-list li#perfil-icon a#icon  i {
 header ul.last-list li:last-child a i {
     font-size: 25px;
     color: #b0afaf;
+}
+
+/* -----------Estilizando o main--------------- */
+
+main {
+    border: 1px solid red;
+}
+
+main div.columns {
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+main div.columns div.col-1 {
+    border: 1px solid blue;
 }
