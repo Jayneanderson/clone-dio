@@ -2,55 +2,57 @@
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
+    text-rendering: optimizeLegibility !important; /* deixa a fonte menos "pixalizada". A 2ª propriedade sobreescreve qualquer outra text-rendering*/
+    -webkit-font-smoothing: antialiased !important;
     font-size: 14px;
     font-weight: 700;
+    background: #23282c;
 }
 
 .container {
     padding: 0px 10px;
-    padding-right: 20px;
 }
 
-header {
+.header {
     height: 55px;
     display: flex;
     align-items: center;
     background-color: #000000;
 }
 
-header a.logo {
+.logo {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-header ul {
+.list {
     height: 100%;
     display: flex;
     align-items: center;
     list-style-type: none;
 }
 
-header ul li:first-child {
+.list li:first-child {
     margin-left: 45px;
 }
 
-header ul.first-list li {
+.first-list-element {
     margin-right: 3px;
     margin-top: 3px;
 }
 
-header ul.first-list a {
-    font-size: 14.5px;
+.first-list a {
+    font-size: 14px;
 }
 
-header ul.first-list li.pro {
+.first-list li.pro {
     position: relative;
     margin-right: 7px;
     margin-left: 35px;
 }
 
-header ul.first-list li.pro a:after {
+.first-list .pro a:after {
     content: "PRO";
     font-size: 10px;
     position: absolute;
@@ -62,19 +64,23 @@ header ul.first-list li.pro a:after {
     color: #fff;
 }
 
-header ul.first-list li:hover a {
+.first-list li:hover a {
     cursor: pointer;
     color: #fa962a;
 }
 
-header ul.first-list li#seja-pro a {
+#button-pro {
+    margin-bottom: 3px;
+}
+
+#button-pro a {
     padding: 5px 8px;
     background-color: #fa962a;
     color: #fff;
     border-radius: 3px;
 }
 
-header ul.first-list li#seja-pro:hover a {
+#button-pro:hover a {
     background-color: #f88406;
 }
 
@@ -88,26 +94,26 @@ a {
     font-weight: bold;
 }
 
-ul.last-list {
+.last-list {
     margin-left: auto;
     display: flex;
     align-items: center;
 }
 
-header ul.last-list:first-child {
+.last-list:first-child {
 }
 
-header ul.last-list li i {
+.fa-heart {
     color: red;
     font-size: 20px;
 }
 
-header ul.last-list li a#icon {
+.last-list li .icon {
     display: flex;
     align-items: center;
 }
 
-header ul.last-list li#perfil-icon a#icon  img {
+.photo-icon {
     width: 40px;
     height: 40px;
     border: 3px solid #fff;
@@ -115,14 +121,15 @@ header ul.last-list li#perfil-icon a#icon  img {
     object-fit: cover;
 }
 
-header ul.last-list li#perfil-icon a#icon  i {
+.fa-chevron-down {
     color: #fff;
     margin-left: 5px;
 }
 
-header ul.last-list li:last-child a i {
+.fa-bell {
     font-size: 25px;
     color: #b0afaf;
+    margin-right: 20px;
 }
 
 /* -----------Estilizando o main--------------- */
@@ -131,10 +138,89 @@ main {
     border: 1px solid red;
 }
 
+#main {
+    margin-top: 40px;
+}
+
 main div.columns {
-    grid-template-columns: 1fr 2fr 1fr;
+    display: grid;
+    grid-template-columns: 335px 670px 335px;
 }
 
 main div.columns div.col-1 {
     border: 1px solid blue;
+}
+
+/* -----------Estilizando o menu-list (col-1) dentro do main----------- */
+.col-1-perfil {
+    display: flex;
+}
+
+.col-1-perfil-img {
+    margin-right: 15px;
+}
+
+.col-1-perfil-img {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.col-1-perfil-autor-level {
+    display: flex;
+    align-items: center;
+}
+
+.col-1-perfil-autor {
+    color: #fff;
+}
+
+#col-1-perfil-level {
+    font-size: 12px;
+    margin-left: 5px;
+    padding: 1px 8px;
+    background-color: #00af00;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#xp {
+    color: white;
+    font-weight: 400;
+}
+
+#xp-bar {
+    width: 130px;
+    height: 8px;
+    display: block;
+    background-color: #00af00;
+    border-radius: 3px;
+}
+
+.col-1-menu {
+    margin-top: 50px;
+    padding-left: 15px;
+}
+
+.col-1-menu-list {
+    list-style-type: none;
+}
+
+.col-1-menu-list li {
+    margin-bottom: 20px;
+}
+
+.col-1-menu-list-element {
+    display: flex;
+}
+
+.col-1-menu-list-title {
+    font-size: 17.5px;
+}
+.col-1-menu-list-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
 }
