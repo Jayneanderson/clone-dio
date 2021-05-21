@@ -14,6 +14,10 @@ body {
     background: #23282c;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .container {
     padding: 0px 10px;
 }
@@ -36,7 +40,6 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    list-style-type: none;
 }
 
 .first-list-element {
@@ -178,6 +181,29 @@ a {
     align-items: center;
 }
 
+.profile-menu-button {
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+label {
+    width: 57px;
+    height: 45px;
+    position: absolute;
+    left: -1px;
+    bottom: -2px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input[type=checkbox]:checked  ~ div.box-perfil-hover {
+    display: none;
+}
+
 .photo-icon {
     width: 40px;
     height: 40px;
@@ -189,6 +215,51 @@ a {
 .fa-chevron-down {
     color: #fff;
     margin-left: 5px;
+}
+
+.box-perfil-hover {
+    width: 183px;
+    position: absolute;
+    top: 51px;
+    right: 0px;
+    background-color: #fff;
+    color: rgba(35, 40, 44, 0.5);
+    border-radius: 3px;
+}
+
+.box-perfil-list {
+}
+
+.box-perfil-element {
+    height: 100%;
+    padding: 10px 11px;
+    cursor: pointer;
+}
+
+.box-perfil-element:hover {
+    background-color: rgba(196, 196, 196, 0.3);
+}
+
+.box-perfil-link {
+    width: 100%;
+    display: block;
+    color: rgba(35, 40, 44, 0.5);
+}
+
+.fa-user {
+}
+
+.box-perfil-icon {
+    width: 20px;
+    height: 14px;
+    margin-right: 7px;
+    font-size: 12px;
+    text-align: center;
+    color: rgba(35, 40, 44, 0.3);
+}
+
+.box-perfil-title {
+    font-weight: 400;
 }
 
 .fa-bell {
@@ -274,7 +345,6 @@ main div.columns div.col-1 {
 }
 
 .col-1-menu-list {
-    list-style-type: none;
 }
 
 .col-1-menu-list li {
