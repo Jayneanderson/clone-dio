@@ -185,7 +185,7 @@ a {
     position: relative;
 }
 
-input {
+#click {
     display: none;
 }
 
@@ -201,7 +201,7 @@ label {
 }
 
 input[type=checkbox]:checked  ~ div.box-perfil-hover {
-    display: none;
+    display: block;
 }
 
 .photo-icon {
@@ -219,6 +219,7 @@ input[type=checkbox]:checked  ~ div.box-perfil-hover {
 
 .box-perfil-hover {
     width: 183px;
+    display: none;
     position: absolute;
     top: 51px;
     right: 0px;
@@ -275,7 +276,7 @@ main {
 }
 
 #main {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 main div.columns {
@@ -284,7 +285,6 @@ main div.columns {
 }
 
 main div.columns div.col-1 {
-    border: 1px solid blue;
 }
 
 /* -----------Estilizando o menu-list (col-1) dentro do main----------- */
@@ -427,4 +427,78 @@ main div.columns div.col-1 {
 .my-courses-button:hover {
     background-color: #fff;
     color: #23282c;
+}
+
+/* -----------Estilizando a 2º coluna----------- */
+
+.main-title {
+    margin-bottom: 15px;
+    font-size: 21px;
+    color: #fff;
+}
+.col-2-boxes {
+}
+
+.col-2-box-list {
+    display: flex;
+}
+
+.col-2-box-element {
+    width: 169px;
+    height: 227px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 18px;
+    background-image: url('/img/card-01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.col-2-box-element:nth-child(2) {
+    background-image: url('/img/card-02.png');
+}
+
+.col-2-box-element:nth-child(3) {
+    background-image: url('/img/card-03.png');
+}
+
+.col-2-box-element:nth-child(4) {
+    background-image: url('/img/card-04.png');
+}
+
+.col-2-box-element:last-child {
+    margin-right: 0;
+}
+
+.col-2-box {
+   
+}
+
+.col-2-box-text {
+    width: 100%;
+    display: block;
+    align-items: center;
+    padding: 0px 20px;
+    line-height: 1.5;
+}
+
+.col-2-box-img {
+    display: flex;
+}
+
+.col-2-box-title {
+    font-size: 14px;
+}
+
+.col-2-box-icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 7px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
 }
