@@ -7,7 +7,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Clone DIO</title>
 </head>
 <body>
@@ -52,10 +54,10 @@
                 <i class="fas fa-heart"></i>
                 <i class="fas fa-heart"></i>
 
-                <div id="box-hearts-hover">
-                    <h5 id="box-hearts-title">Recuperação dos Hearts</h5>
-                    <div id="box-heart">
-                        <p id="box-hearts-description"><small>Você está com todos os hearts completos!</small></p>
+                <div class="box-hearts-hover">
+                    <h5 class="box-hearts-title">Recuperação dos Hearts</h5>
+                    <div class="box-heart">
+                        <p class="box-hearts-description"><small>Você está com todos os hearts completos!</small></p>
                     </div>
                 </div>
             </li>
@@ -65,10 +67,10 @@
                     <img class="photo-icon" src="img/perfil-icon.jpg" alt="Ícone de foto do perfil">
                     <i class="fas fa-chevron-down"></i>
                 </a>
-                <input type="checkbox" id="click">
-                <label for="click"></label>
+                <input type="checkbox" id="click" class="click">
+                <label for="click" class="click-label"></label>
 
-                <div class="box-perfil-hover" for="click">
+                <div class="box-perfil-hover">
                     <ul class="box-perfil-list">
                         <li class="box-perfil-element">
                             <a href="" class="box-perfil-link">
@@ -99,10 +101,21 @@
                 </div>
             </li>
 
-            <li>
+            <li class="last-list-element" id="bell">
                 <a href="">
                     <i class="fas fa-bell"></i>
                 </a>
+
+                <input type="checkbox" id="bell-click" class="click">
+                <label for="bell-click" class="click-label"></label>
+                
+                <div class="box-hearts-hover">
+                    <h5 class="box-hearts-title">Notificações</h5>
+                    <hr class="line">
+                    <div class="box-heart">
+                        <p class="box-hearts-description"><small>Você não tem nenhuma notificação nova! ;)</small></p>
+                    </div>
+                </div>
             </li>
         </ul>
     </header>
@@ -114,7 +127,7 @@
                     <img class="col-1-perfil-img" src="img/perfil-icon.jpg" alt="">
                     <div id="perfil">
                         <div class="col-1-perfil-autor-level">
-                            <h2 class="col-1-perfil-autor">Jayneanderson</h2>
+                            <h2 class="col-1-perfil-autor">Jayneanderson Santos</h2>
                             <span id="col-1-perfil-level">LEVEL 7</span>
                         </div>
                         <span id="xp">Experiência 3411/4000</span>
@@ -227,8 +240,20 @@
                         </li>
                     </ul>
                 </div>
+
+                <hr class="line">
+
+                <a href="" class="col-2-notice">
+                    <img src="img/santander_dev_week_mobile.png" alt="" class="col-2-notice-img">
+                </a>
+
+                <a href="" class="col-2-notice">
+                    <img src="img/santander_dev_week_full_stack.png" alt="" class="col-2-notice-img">
+                </a>
             </div>
-            <div class="col-3"></div>
+            <div class="col-3">
+                <p>Esta é a 3ª coluna</p>
+            </div>
         </div>
     </main>
     

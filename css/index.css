@@ -121,11 +121,11 @@ a {
     cursor: pointer;
 }
 
-.last-list-element:hover #box-hearts-hover {
+.last-list-element:hover .box-hearts-hover {
     display: flex;
 }
 
-#box-hearts-hover {
+.box-hearts-hover {
     width: 270px;
     height: 100px;
     display: none;
@@ -140,7 +140,7 @@ a {
     border-radius: 3px;
 }
 
-#box-hearts-hover::before {
+.box-hearts-hover::before {
     content: '▲';
     font-size: 16px;
     color: #fff;
@@ -149,11 +149,11 @@ a {
     left: 125px;
 }
 
-#box-hearts-title {
+.box-hearts-title {
     margin-top: 5px;
 }
 
-#box-heart {
+.box-heart {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,11 +185,11 @@ a {
     position: relative;
 }
 
-#click {
+.click {
     display: none;
 }
 
-label {
+.click-label {
     width: 57px;
     height: 45px;
     position: absolute;
@@ -200,7 +200,7 @@ label {
     background-color: transparent;
 }
 
-input[type=checkbox]:checked  ~ div.box-perfil-hover {
+input.click[type=checkbox]:checked  ~ div.box-perfil-hover {
     display: block;
 }
 
@@ -261,10 +261,61 @@ input[type=checkbox]:checked  ~ div.box-perfil-hover {
 
 .box-perfil-title {
     font-weight: 400;
+    color: #000000;
+}
+
+#bell {
+    position: relative;
+}
+
+input#bell-click[type=checkbox]:checked  ~ div.box-hearts-hover {
+    display: flex;
+}
+
+#bell .click-label {
+    width: 30px;
+    height: 30px;
+    top: -3px;
+    left: -5.2px;
+}
+
+#bell .click-label::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 31px;
+    border: 1px solid rgba(176, 176, 176, 0.5);
+}
+
+#bell .click-label::after:hover {
+    border: 1px solid red;
+}
+
+#bell .box-hearts-hover {
+    width: 301px;
+    top: 45px;
+    right: -4px;
+}
+
+#bell:hover .box-hearts-hover {
+    display: none;
+}
+
+#bell .box-hearts-hover::before {
+    right: -107px;
+}
+
+#bell .box-hearts-title {
+    font-size: 12px;
+}
+
+#bell .line {
+    margin: 10px 0px;
+    margin-bottom: 0px;
 }
 
 .fa-bell {
-    font-size: 25px;
+    font-size: 23px;
     color: #b0afaf;
     margin-right: 20px;
 }
@@ -295,6 +346,7 @@ main div.columns div.col-1 {
 .col-1-perfil {
     display: flex;
     padding: 10px 0px;
+    border-radius: 3px;
 }
 
 .col-1-perfil-img {
@@ -310,18 +362,25 @@ main div.columns div.col-1 {
 }
 
 .col-1-perfil-autor-level {
+    width: 231.16px;
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .col-1-perfil-autor {
+    width: 137px;
+    font-size: 17.5px;
     color: #fff;
+    line-height: 1.3;
 }
 
 #col-1-perfil-level {
-    font-size: 12px;
-    margin-left: 5px;
-    padding: 1px 8px;
+    width: auto;
+    font-size: 10.5px;
+    margin-left: 8px;
+    padding: 2px 7px;
+    text-align: center;
     background-color: #00af00;
     color: #fff;
     border-radius: 10px;
@@ -329,7 +388,7 @@ main div.columns div.col-1 {
 
 #xp {
     color: white;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 #xp-bar {
@@ -456,19 +515,22 @@ main div.columns div.col-1 {
     object-fit: fill;
     margin-right: 10px;
     border-radius: 7px;
+    cursor: pointer;
 }
 
-.col-2-box-element:nth-child(2) {
-    background-image: url('/img/card-02.png');
-}
+.col-2-box-element:nth-child(1):hover {background-image: url('/img/card-01-hover.png');}
 
-.col-2-box-element:nth-child(3) {
-    background-image: url('/img/card-03.png');
-}
+.col-2-box-element:nth-child(2) {background-image: url('/img/card-02.png');}
 
-.col-2-box-element:nth-child(4) {
-    background-image: url('/img/card-04.png');
-}
+.col-2-box-element:nth-child(2):hover {background-image: url('/img/card-02-hover.png');}
+
+.col-2-box-element:nth-child(3) {background-image: url('/img/card-03.png');}
+
+.col-2-box-element:nth-child(3):hover {background-image: url('/img/card-03-hover.png');}
+
+.col-2-box-element:nth-child(4) {background-image: url('/img/card-04.png');}
+
+.col-2-box-element:nth-child(4):hover {background-image: url('/img/card-04-hover.png');}
 
 .col-2-box-element:last-child {
     margin-right: 0;
@@ -483,6 +545,7 @@ main div.columns div.col-1 {
     display: block;
     align-items: center;
     padding: 0px 20px;
+    padding-left: 17px;
     line-height: 1.5;
 }
 
@@ -501,4 +564,30 @@ main div.columns div.col-1 {
     display: inline-flex;
     align-items: center;
     vertical-align: middle;
+}
+
+/* -----------Estilizando a linha e a div da 2ª coluna----------- */
+
+hr.line {
+    border-top: none;
+    border-color: rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    overflow: visible;
+}
+
+.col-2-notice {
+    width: 100%;
+}
+
+.col-2-notice-img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* -----------Estilizando a 3ª coluna----------- */
+
+.col-3 {
+    padding: 0px 15px;
+    border: 1px solid red;
 }
