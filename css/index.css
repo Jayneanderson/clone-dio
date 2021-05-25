@@ -392,10 +392,10 @@ main div.columns div.col-1 {
 }
 
 .xp-bar {
-    width: 130px;
+    width: 150px;
     height: 8px;
     display: block;
-    background-color: #00af00;
+    background-color: #fff;
     border-radius: 3px;
 }
 
@@ -595,7 +595,7 @@ hr.line {
     padding-top: 10px;
     background-color: #191e28;
     border-radius: 3px;
-    color: #fa962a;
+    color: #fff;
 }
 
 .col-3 .main-title {
@@ -603,14 +603,12 @@ hr.line {
 }
 
 .col-3-rankings {
-    border: 1px solid green;
 }
 
 .col-3-ranking {
     display: flex;
     align-items: center;
-    border: 1px solid purple;
-    
+    margin-bottom: 10px;
 }
 
 .col-3-ranking-placar {
@@ -625,4 +623,23 @@ hr.line {
 
 .col-3-ranking-name {
     font-size: 14px;
+    
+}
+
+.col-3-ranking-name-xp .xp-bar {
+    width: 200px;
+    position: relative;
+    z-index: 54;
+    background-color: #fff;
+}
+
+.col-3-ranking-name-xp .xp-bar::before {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 8px;
+    display: block;
+    background-color: #00af00;
+    border-radius: 3px;
+
 }
