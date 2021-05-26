@@ -210,6 +210,18 @@ input.click[type=checkbox]:checked  ~ div.box-perfil-hover {
     border: 3px solid #fff;
     border-radius: 50%;
     object-fit: cover;
+    position: relative;
+}
+
+.photo-icon-flag {
+    max-width: 11px;
+    height: 11px;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 50%;
+    bottom: -3px;
+    left: 15.5px;
+    
 }
 
 .fa-chevron-down {
@@ -284,11 +296,11 @@ input#bell-click[type=checkbox]:checked  ~ div.box-hearts-hover {
     display: block;
     position: relative;
     top: 31px;
-    border: 1px solid rgba(176, 176, 176, 0.5);
+    border: 1px solid #000000;
 }
 
-#bell .click-label::after:hover {
-    border: 1px solid red;
+#bell .click-label:hover::after {
+    border: 1px solid rgba(176, 176, 176, 0.3);
 }
 
 #bell .box-hearts-hover {
@@ -400,7 +412,7 @@ main div.columns div.col-1 {
 }
 
 .col-1-menu {
-    margin-top: 30px;
+    margin-top: 22px;
 }
 
 .col-1-menu-list {
@@ -410,8 +422,9 @@ main div.columns div.col-1 {
 }
 
 .col-1-menu-list-element {
-    display: flex;
     height: 100%;
+    display: flex;
+    align-items: center;
     margin-left: 5px; /* Este afasta do canto */
     padding: 9px 8px; /* Este aqui afasta dentro do li */
     border-radius: var(--radius); 
@@ -544,8 +557,8 @@ main div.columns div.col-1 {
     width: 100%;
     display: block;
     align-items: center;
-    padding: 0px 20px;
-    padding-left: 17px;
+    padding: 0px 16px;
+    padding-left: 16px;
     line-height: 1.5;
 }
 
@@ -588,33 +601,52 @@ hr.line {
 /* -----------Estilizando a 3ª coluna----------- */
 
 .col-3 {
-    padding: 0px 15px;
-    margin-top: 45px;
-    margin-left: 16px;
-    margin-right: 15px;
-    padding-top: 10px;
-    background-color: #191e28;
-    border-radius: 3px;
-    color: #fff;
-}
-
-.col-3 .main-title {
-    color: #fa962a;;
 }
 
 .col-3-rankings {
+    padding: 10px 15px;
+    margin-top: 45px;
+    margin-left: 17px;
+    margin-right: 15px;
+    padding-top: 3px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #191e28;
+    
+}
+
+.col-3 .main-title {
+    color: #fa962a;
+    margin-bottom: 0;
+    line-height: 2;
+}
+
+.col-3-border {
+    width: 30px;
+    display: block;
+    border-bottom: 3px solid #fa962a;
+}
+
+.col-3-rankings-list {
+    margin-top: 25px;
 }
 
 .col-3-ranking {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.col-3-ranking .photo-icon-flag {
+    left: 27px;
 }
 
 .col-3-ranking-placar {
     display: flex;
     align-items: center;
     font-weight: normal;
+    position: relative;
 }
 
 .col-3-ranking-name-xp {
@@ -633,7 +665,8 @@ hr.line {
     background-color: #fff;
 }
 
-.col-3-ranking-name-xp .xp-bar::before {
+/* Abaixo -> Este intervalo serve para estilizar a barra de menu */
+.xp-bar::before {
     content: '';
     position: absolute;
     width: 130px;
@@ -642,4 +675,43 @@ hr.line {
     background-color: #00af00;
     border-radius: 3px;
 
+}
+
+.col-3-ranking:nth-child(1) .xp-bar::before {
+    width: 100%;
+}
+
+.col-3-ranking:nth-child(2) .xp-bar::before {
+    width: 95%;
+}
+
+.col-3-ranking:nth-child(3) .xp-bar::before {
+    width: 90%;
+}
+
+.col-3-ranking:nth-child(4) .xp-bar::before {
+    width: 80%;
+}
+
+.col-3-ranking:nth-child(5) .xp-bar::before {
+    width: 79%;
+}
+
+/*  Acima -> Este intervalo serve para estilizar a barra de menu */
+
+
+.col-3-ranking-all {
+    text-align: end;
+    margin-top: 15px;
+}
+
+.col-3-ranking-all-view {
+    font-weight: normal;
+}
+.col-3-ranking-all-view:hover {
+    text-decoration: underline;
+}
+
+.col-3-articles {
+    margin-top: 25px;
 }
