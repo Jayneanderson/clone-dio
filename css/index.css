@@ -656,6 +656,54 @@ hr.line {
     background-color: #3b4651;
 }
 
+.col-2-feed-card .col-3-ranking-name a {
+    font-size: 17.5px;
+}
+
+.fa-caret-right {
+    font-size: 20px;
+    margin: 0px 1rem;
+    color: rgb(128, 128, 128);
+}
+
+.col-2-feed-card .col-3-ranking-name a:hover {
+    color: #fa962a;
+}
+
+.col-2-feed-card-widgets a:hover
+.col-2-feed-title,
+.col-2-feed-card-widgets a:hover
+.col-2-feed-text {
+    color: #fa962a;
+}
+
+.col-2-feed-card-widgets
+.col-2-feed-title {
+    font-size: 21px;
+    margin-bottom: 3px;
+}
+
+
+.col-2-feed-text {
+    font-weight: 500;
+    /*
+    As propriedades abaixo são para mostrar
+    apenas 3 linhas no card.
+        */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.col-2-feed-text::after {
+    content: 'Ver mais';
+}
+
+.feed-like {
+    font-size: 16px;
+    color: #fff;
+}
+
 /* -----------Estilizando a 3ª coluna----------- */
 
 .col-3 {
@@ -799,6 +847,7 @@ hr.line {
     align-items: center;
     margin-right: 1.5rem;
     font-weight: normal;
+    cursor: pointer;
 }
 
 .col-3-article-img {
@@ -807,7 +856,7 @@ hr.line {
     margin-right: 3px
 }
 
-.like {
+.col-3-article-img.like {
     width: 12.30px;
     height: 18px;
     background-image: url('/img/icon/feed-hot.png');
