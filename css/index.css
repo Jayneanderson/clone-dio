@@ -25,6 +25,7 @@ ul {
 }
 
 .header {
+    width: 100%;
     height: 55px;
     display: flex;
     align-items: center;
@@ -335,17 +336,17 @@ input#bell-click[type=checkbox]:checked  ~ div.box-hearts-hover {
 
 /* -----------Estilizando o main--------------- */
 
-main {
-    
-}
-
 #main {
+    width: 100%;
     margin-top: 30px;
 }
 
-main div.columns {
+.columns {
+    width: 100%;
     display: grid;
-    grid-template-columns: 335px 670px 335px;
+    grid-template-columns: 25% 50% 25%;
+    /* grid-template-columns: 335px 670px 335px; */
+    /* grid-template-columns: repeat(2, 335px 670px); */
 }
 
 main div.columns div.col-1 {
@@ -362,6 +363,10 @@ main div.columns div.col-1 {
     border-radius: 3px;
 }
 
+.col-1-profile-flag {
+    position: relative;
+}
+
 .col-1-perfil-img {
     margin-right: 15px;
 }
@@ -372,6 +377,15 @@ main div.columns div.col-1 {
     border: 3px solid #fff;
     border-radius: 50%;
     object-fit: cover;
+}
+
+#profile-flag {
+    max-width: 17px;
+    height: 17px;
+    max-width: 17px;
+    height: 17px;
+    left: 24px;
+    bottom: 8px;
 }
 
 .col-1-perfil-autor-level {
@@ -516,8 +530,52 @@ main div.columns div.col-1 {
     display: flex;
 }
 
+.owl-theme .owl-nav .disabled {
+    opacity: 0;
+    /*OBS: não adianta mudar aqui, pois não vai mudar.
+    Vá no arquivo theme.default na pasta owl/css e procure por "owl-theme .owl-nav .disabled" e então mude o opacity */
+}
+
+.item {
+    width: 161px;
+
+}
+
+
+#card-01 {
+    background-image: url('/img/card-01.png');
+}
+
+#card-01:hover {
+    background-image: url('/img/card-01-hover.png');
+}
+
+#card-02 {
+    background-image: url('/img/card-02.png');
+}
+
+#card-02:hover {
+    background-image: url('/img/card-02-hover.png');
+}
+
+#card-03 {
+    background-image: url('/img/card-03.png');
+}
+
+#card-03:hover {
+    background-image: url('/img/card-03-hover.png');
+}
+
+#card-04 {
+    background-image: url('/img/card-04.png');
+}
+
+#card-04:hover {
+    background-image: url('/img/card-04-hover.png');
+}
+
 .col-2-box-element {
-    width: 169px;
+    width: 100%;
     height: 227px;
     display: flex;
     flex-direction: column;
@@ -532,7 +590,7 @@ main div.columns div.col-1 {
     cursor: pointer;
 }
 
-.col-2-box-element:nth-child(1):hover {background-image: url('/img/card-01-hover.png');}
+.col-2-box-element:hover {background-image: url('/img/card-01-hover.png');}
 
 .col-2-box-element:nth-child(2) {background-image: url('/img/card-02.png');}
 
@@ -550,7 +608,41 @@ main div.columns div.col-1 {
     margin-right: 0;
 }
 
+.owl-prev {
+    position: absolute;
+    top: 37%;
+    left: -10px;
+}
+
+.owl-next {
+    position: absolute;
+    top: 37%;
+    right: -13px;
+}
+
+.fa-angle-left, .fa-angle-right {
+    display: flex;
+    background-color: #fff;
+    color: rgb(250, 150, 42, 0.7);
+    font-size: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    padding: 6px 15px;
+}
+
+.fa-angle-left:hover, .fa-angle-right:hover {
+    color: rgb(250, 150, 42, 1);
+
+}
+
+.fa-angle-left::before {
+    margin-right: 3px;
+}
+
 .col-2-box {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
    
 }
 
@@ -571,7 +663,7 @@ main div.columns div.col-1 {
     font-size: 14px;
 }
 
-.col-2-box-icon {
+.owl-carousel .owl-item img.col-2-box-icon {
     width: 15px;
     height: 15px;
     margin-left: 7px;
@@ -680,7 +772,7 @@ hr.line {
 .col-2-feed-card-widgets
 .col-2-feed-title {
     font-size: 21px;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
 }
 
 
@@ -758,6 +850,7 @@ hr.line {
 }
 
 .col-3-ranking-name-xp {
+    width: 100%;
     margin-left: 7px;
 }
 
@@ -767,7 +860,7 @@ hr.line {
 }
 
 .col-3-ranking-name-xp .xp-bar {
-    width: 210px;
+    width: 100%;
     position: relative;
     z-index: 54;
     background-color: #fff;
