@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
+    
+    <!-- Folhas de estilo -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+   
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="owl/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/css/owl.theme.default.min.css">
     <title>Clone DIO</title>
 </head>
 
@@ -127,7 +136,10 @@
         <div class="columns container">
             <div class="col-1">
                 <div class="col-1-perfil hover">
-                    <img class="col-1-perfil-img" src="img/perfil-icon.jpg" alt="">
+                    <div class="col-1-profile-flag">
+                        <img class="col-1-perfil-img" src="img/perfil-icon.jpg" alt="">
+                        <img src="img/icon/bandeira.png" alt="" class="photo-icon-flag" id="profile-flag">
+                    </div>
                     <div id="perfil">
                         <div class="col-1-perfil-autor-level">
                             <h2 class="col-1-perfil-autor">Jayneanderson Santos</h2>
@@ -215,40 +227,40 @@
             <div class="col-2">
                 <h2 class="main-title">ACELERE O SEU APRENDIZADO COM TODA A COMUNIDADE</h2>
                 <div class="col-2-boxes">
-                    <ul class="col-2-box-list">
-                        <li class="col-2-box-element">
+                    <div class="col-2-box-list owl-carousel owl-theme">
+                        <div class="item col-2-box-element" id="card-01">
                             <a href="" class="col-2-box">
                                 <div class="col-2-box-text">
                                     CONTINUAR MEU BOOTCAMP
-                                    <img src="img/icon/start.png" alt="" class="col-2-box-icon">
+                                    <img id="ha"src="img/icon/start.png" alt="" class="col-2-box-icon">
                                 </div>
                             </a>
-                        </li>
-                        <li class="col-2-box-element">
+                        </div>
+                        <div class="item col-2-box-element" id="card-02">
                             <a href="" class="col-2-box">
                                 <div class="col-2-box-text">
                                     PRATICAR COM PROJETOS
                                     <img src="img/icon/start.png" alt="" class="col-2-box-icon">
                                 </div>
                             </a>
-                        </li>
-                        <li class="col-2-box-element">
+                        </div>
+                        <div class="item col-2-box-element" id="card-03">
                             <a href="" class="col-2-box">
                                 <div class="col-2-box-text">
                                     PUBLICAR UM ARTIGO
                                     <img src="img/icon/start.png" alt="" class="col-2-box-icon">
                                 </div>
                             </a>
-                        </li>
-                        <li class="col-2-box-element">
+                        </div>
+                        <div class="item col-2-box-element" id="card-04">
                             <a href="" class="col-2-box">
                                 <div class="col-2-box-text">
                                     ACELERAR MINHA CARREIRA
                                     <img src="img/icon/start.png" alt="" class="col-2-box-icon">
                                 </div>
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <hr class="line">
@@ -262,6 +274,17 @@
                 </a>
 
                 <div class="col-2-feed">
+                        <!-- <div class="owl-carousel owl-theme">
+                            <div class="item col-2-box-element" id="card-01">
+                            </div>
+                            <div class="item col-2-box-element" id="card-02">
+                            </div>
+                            <div class="item col-2-box-element" id="card-03">
+                            </div>
+                            <div class="item col-2-box-element" id="card-04">
+                            </div>
+                        </div> -->
+                    
                     <div class="col-2-feed-header">
 
                         <div>
@@ -507,9 +530,19 @@
                 </div>
             </div>
         </div>
+        
     </main>
 
+
+
+    
+
+    <!-- Arquivo de ícones -->
     <script src="https://kit.fontawesome.com/a14a784515.js" crossorigin="anonymous"></script>
+
+    <script src="owl/js/jquery.min.js"></script>
+    <script src="owl/js/owl.carousel.min.js"></script>
+    <script src="owl/js/owl.config.js"></script>
 </body>
 
 </html>
