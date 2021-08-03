@@ -349,22 +349,29 @@ input#bell-click[type=checkbox]:checked  ~ div.box-hearts-hover {
     /* grid-template-columns: repeat(2, 335px 670px); */
 }
 
-main div.columns div.col-1 {
-}
-
 /* -----------Estilizando o menu-list (col-1) dentro do main----------- */
 .col-1 {
     padding-right: 15px;
 }
 
 .col-1-perfil {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 10px 0px;
     border-radius: 3px;
 }
 
 .col-1-profile-flag {
     position: relative;
+    padding: 12px 0;
+}
+
+#perfil {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .col-1-perfil-img {
@@ -382,14 +389,11 @@ main div.columns div.col-1 {
 #profile-flag {
     max-width: 17px;
     height: 17px;
-    max-width: 17px;
-    height: 17px;
     left: 24px;
     bottom: 8px;
 }
 
 .col-1-perfil-autor-level {
-    width: 231.16px;
     display: flex;
     align-items: center;
     margin-bottom: 5px;
@@ -413,13 +417,17 @@ main div.columns div.col-1 {
     border-radius: 10px;
 }
 
+.xp-line {
+    position: relative;
+}
+
 .xp {
     color: white;
     font-weight: normal;
 }
 
 .xp-bar {
-    width: 170px;
+    width: 100%;
     height: 8px;
     display: block;
     background-color: #fff;
@@ -452,6 +460,12 @@ main div.columns div.col-1 {
     width: 30px;
     height: 30px;
     margin-right: 8px;
+}
+
+/* ----LISTA 2 para quando a tela ficar pequena----- */
+
+.card-list{
+    display: none;
 }
 
 /* ----Início: definindo hovers----- */
@@ -519,9 +533,19 @@ main div.columns div.col-1 {
 /* -----------Estilizando a 2º coluna----------- */
 
 .main-title {
+    position: relative;
+}
+
+#h1 {
+    width: 100%;
+    position: relative;
+}
+
+.title {
     margin-bottom: 15px;
     font-size: 21px;
     color: #fff;
+
 }
 .col-2-boxes {
 }
@@ -663,7 +687,7 @@ main div.columns div.col-1 {
     font-size: 14px;
 }
 
-.owl-carousel .owl-item img.col-2-box-icon {
+.owl-carousel .owl-item .col-2-box-icon {
     width: 15px;
     height: 15px;
     margin-left: 7px;
@@ -815,7 +839,7 @@ hr.line {
     
 }
 
-.col-3 .main-title {
+.col-3 .title {
     color: #fa962a;
     margin-bottom: 0;
     line-height: 2;
@@ -870,7 +894,7 @@ hr.line {
 .xp-bar::before {
     content: '';
     position: absolute;
-    width: 130px;
+    width: 70%;
     height: 8px;
     display: block;
     background-color: #00af00;
