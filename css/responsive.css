@@ -152,4 +152,8 @@
     .col-1-card {
         width: 350px;
     }
+
+    #hearts {
+        display: none;
+    }
 }
